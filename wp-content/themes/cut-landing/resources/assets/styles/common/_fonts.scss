@@ -1,0 +1,33 @@
+// @font-face {
+//   font-family: "reader";
+//   src: url("../fonts/reader-medium.eot");
+//   src: url("../fonts/reader-medium.eot?#iefix") format("embedded-opentype"),
+//        url("../fonts/reader-medium.woff2") format("woff2"),
+//        url("../fonts/reader-medium.woff") format("woff"),
+//        url("../fonts/reader-medium.ttf") format("truetype");
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "reader";
+//   src: url("../fonts/reader-italic.eot");
+//   src: url("../fonts/reader-italic.eot?#iefix") format("embedded-opentype"),
+//        url("../fonts/reader-italic.woff2") format("woff2"),
+//        url("../fonts/reader-italic.woff") format("woff"),
+//        url("../fonts/reader-italic.ttf") format("truetype");
+//   font-weight: normal;
+//   font-style: italic;
+// }
+
+@font-face {
+  font-family: 'Calibre-Regular';
+  src: url('../fonts/CalibreRegular.eot');
+  src: url('../fonts/CalibreRegular.eot') format('embedded-opentype'),
+       url('../fonts/CalibreRegular.woff2') format('woff2'),
+       url('../fonts/CalibreRegular.woff') format('woff'),
+       url('../fonts/CalibreRegular.ttf') format('truetype'),
+       url('../fonts/CalibreRegular.svg#CalibreRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

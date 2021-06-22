@@ -1,7 +1,12 @@
 @import "common/variables";
+@import "common/normalize";
+@import "common/fonts";
+@import "common/mixins";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
+
+@import "~plyr/src/sass/plyr";
 
 /**
  * Import npm dependencies

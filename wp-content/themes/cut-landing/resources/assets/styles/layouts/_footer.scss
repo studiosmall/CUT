@@ -1,0 +1,34 @@
+.content-info {
+  padding: 45px 0;
+  
+  &__inner {
+    @include inner;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint(medium) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__col {
+    width: 100%;
+
+    @include breakpoint(medium) {
+      width: 31%;
+    }
+  }
+
+  span {
+    @include paragraph;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  a {
+    @include hoverline($brand--primary);
+    @include paragraph;
+  }
+}

@@ -1,7 +1,27 @@
-.banner .nav li {
-  @extend .nav-item;
-}
+.header {
+  padding: 25px 0 50px 0;
 
-.banner .nav a {
-  @extend .nav-link;
+  @include breakpoint(medium) {
+    padding: 25px 0 0 0;
+  }
+
+  &__inner {
+    @include inner;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // &__left,
+  // &__center,
+  // &__right {
+  //   width: ;
+  // }
+
+  &__brand {
+    svg {
+      width: auto;
+      height: 100px;
+    }
+  }
 }

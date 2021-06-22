@@ -1,10 +1,19 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
-$theme-colors: (
-  primary: #525ddc
-);
+/** Colors */
+$brand--primary: #fff;
+$brand--secondary: #abced0;
+$bg: #000;
+
+$transition: 0.3s all ease;
+
+// Global
+$content-width: 1440px;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+$font--heading: "reader", arial, sans-serif;
+$font--body: "Calibre-Regular", arial, sans-serif;
