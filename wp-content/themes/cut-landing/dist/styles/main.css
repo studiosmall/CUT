@@ -18843,6 +18843,55 @@ p {
   }
 }
 
+/* line 39, resources/assets/styles/common/_global.scss */
+
+.plyr .plyr__control--overlaid {
+  background: rgba(100, 101, 106, 0.8);
+  width: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  height: 40px;
+  border-radius: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  margin-top: 10px;
+}
+
+@media (min-width: 900px) {
+  /* line 39, resources/assets/styles/common/_global.scss */
+
+  .plyr .plyr__control--overlaid {
+    margin-top: 0;
+  }
+}
+
+/* line 54, resources/assets/styles/common/_global.scss */
+
+.plyr input[type=range] {
+  color: #64656A;
+}
+
+/* line 58, resources/assets/styles/common/_global.scss */
+
+.plyr .plyr__control.plyr__tab-focus {
+  -webkit-box-shadow: 0 0 0 5px rgba(100, 101, 106, 0.5);
+          box-shadow: 0 0 0 5px rgba(100, 101, 106, 0.5);
+}
+
+/* line 62, resources/assets/styles/common/_global.scss */
+
+.plyr .plyr__control.plyr__tab-focus,
+.plyr .plyr__control:hover,
+.plyr .plyr__control[aria-expanded=true] {
+  background: #64656A;
+}
+
 /* line 5, resources/assets/styles/components/_comments.scss */
 
 .comment-list ol {
