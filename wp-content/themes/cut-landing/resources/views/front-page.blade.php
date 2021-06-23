@@ -5,9 +5,11 @@
     {{-- @include('partials.slider') --}}
 
   <div class="videoWrapper">
-   <div class="plyr__video-embed" id="player">
+   
+
+   <div class="plyr__video-embed" id="player" data-plyr-provider="vimeo">
       <iframe
-        src="https://player.vimeo.com/video/566130862?loop=true&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+        src="https://player.vimeo.com/video/566130862?autoplay=1&amp;loop=true&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;"
         allowfullscreen
         allowtransparency
         allow="autoplay"
@@ -20,11 +22,21 @@
   //['captions', 'quality', 'speed', 'loop']
   const player 	= new Plyr('#player', {
     autoplay: true,
-    controls: false,
   });
 
   // Expose player so it can be used from the console
   window.player = player;
+
+jQuery( document ).ready(function() {
+    
+    jQuery('body').click();
+    
+    setTimeout(function(){
+      player.play(); // eslint-disable-line no-undef
+    }, 1500)
+      
+  });
+
 </script>
 
   @endwhile

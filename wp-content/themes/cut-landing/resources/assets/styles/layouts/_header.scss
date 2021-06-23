@@ -25,3 +25,30 @@
     }
   }
 }
+
+  // Hide controls
+  .plyr--video.plyr--hide-controls .plyr__controls {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0%);
+
+      @include breakpoint(medium) {
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(100%);
+      }
+  }
+
+// mobile play video fix
+@media screen and (max-width: 500px) {
+  .plyr .plyr__controls button[data-plyr=pip],
+  .plyr .plyr__controls button[data-plyr=mute],
+  .plyr .plyr__controls button[data-plyr=volume] {
+      display: block;
+  }
+  .plyr--video.plyr--hide-controls .plyr__controls {
+      opacity: 1;
+      pointer-events: none;
+  }
+}
+
