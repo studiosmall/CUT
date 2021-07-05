@@ -1,0 +1,19 @@
+.textbox {
+  border: 1px solid $brand--secondary;
+  &__inner {
+    padding: 33px 29px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include section-height;
+  }
+
+  .bottom {
+    align-self: flex-start;
+
+    h2 {
+      @include title($brand--primary);
+    }
+  }
+}

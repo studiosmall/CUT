@@ -1,0 +1,189 @@
+@mixin breakpoint($point) {
+  @if $point == xx-large {
+    @media (min-width: 2200px) { @content; }
+  }
+  @if $point == x-large {
+    @media (min-width: 1700px) { @content; }
+  }
+  @if $point == large {
+     @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == medium {
+     @media (min-width: 900px) { @content; }
+  }
+  @else if $point == small {
+     @media (min-width: 600px) { @content; }
+  }
+}
+
+@mixin inner {
+  padding: 0 23px;
+  // max-width: $content-width;
+  margin: 0 auto;
+  @include breakpoint(medium) {
+    padding: 0 23px;
+  }
+}
+
+@mixin section {
+  padding: 35px 0;
+
+  @include breakpoint(medium) {
+    padding: 35px 0;
+  }
+}
+
+@mixin hoverline($color) {
+  display: inline-block;
+  position: relative;
+  color: $color;
+  line-height: 15px;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: $color;
+    transform-origin: bottom;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover::after {
+    @include breakpoint(medium) {
+      transform: scaleX(1);
+      transform-origin: bottom;
+    }
+  }
+}
+@mixin nav {
+  font-family: $font--body;
+  font-weight: 500;
+  font-size: 16px;
+  color: $brand--secondary;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: $transition;
+
+  &:hover {
+    color: $brand--primary;
+    text-decoration: none;
+  }
+}
+
+@mixin scale {
+	transform: scale(1.05);
+}
+
+@mixin section-padding {
+  padding: 15px 0 10px;
+  @include breakpoint(medium) {
+    padding: 35px 0 30px;
+  }
+}
+
+// @mixin btn-solid($bg-color, $color) {
+//   align-items: center;
+//   padding: 10px 20px;
+//   background: $bg-color;
+//   color: $color;
+//   text-align: center;
+//   border: 1px solid $bg-color;
+//   transition: $transition;
+
+//   &::after {
+//     content: "";
+// 		background-image: url("../images/ico-arrow-r.svg");
+//     background-size: 40px;
+//     width: 40px;
+//     height: 29px;
+//     position: absolute;
+//     align-items: center;
+//     margin: 0 0 0 20px;
+//     opacity: 0;
+//     transition: $transition;
+//   }
+
+//   &:hover {
+//     background-color: $brand--secondary;
+//     border-color: $brand--secondary;
+//     color: $color;
+//     text-decoration: none;
+
+//     &::after {
+//       opacity: 1;
+//       margin: 0 0 0 30px;
+//     }
+//   }
+// }
+
+@mixin section-height {
+  min-height: calc(100vh - 125px);
+  height: 100%;
+}
+
+@mixin paragraph {
+  font-family: $font--body;
+  color: $brand--primary;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  line-height: 21px;
+}
+
+@mixin title($color) {
+  font-family: $font--heading;
+  color: $color;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+
+  @include breakpoint(medium) {
+    font-size: 17px;
+    // line-height: 24px;
+  }
+}
+
+@mixin subtitle($color) {
+  font-family: $font--heading;
+  color: $color;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint(medium) {
+    font-size: 16px;
+  }
+}
+
+@mixin input {
+  border-radius: 0;
+  width: 90%;
+  border: 0;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  padding: 10px 10px;
+
+  @include breakpoint(medium) {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+    border: 0;
+    background-color: #e1e1e1;
+  }
+}

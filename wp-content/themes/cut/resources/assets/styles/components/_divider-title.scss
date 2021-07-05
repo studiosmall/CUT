@@ -1,0 +1,33 @@
+.divider-title {
+  border: 1px solid $brand--primary;
+  background-color: $brand--primary;
+  width: 80px;
+
+  &__inner {
+    padding: 33px 29px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include section-height;
+  }
+
+  &__container {
+    text-align: center;
+    // text-orientation: sideways-right;
+    position: relative;
+    // width: 300px;
+    // min-height: 250px;
+    overflow: hidden;
+
+    h2 {
+      @include title(#000);
+      writing-mode: vertical-lr;
+      //position: absolute;
+      //transform: rotate(270deg);
+      //bottom: 0;
+      // left: 0;
+      // margin-left: -200px;
+    }
+  }
+}

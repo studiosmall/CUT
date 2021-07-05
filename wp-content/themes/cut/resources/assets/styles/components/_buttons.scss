@@ -1,0 +1,29 @@
+@mixin button {
+  padding: 10px 30px 5px 30px;
+  background: transparent;
+  border: 1px solid $brand--secondary;
+  font-family: $font--body;
+  color: $brand--primary;
+  text-align: center;
+  transition: $transition;
+  text-transform: uppercase;
+  border-radius: 0;
+  cursor: pointer;
+  line-height: 22px;
+  font-weight: 500;
+  margin: 40px 0 0 0;
+
+  &:hover {
+    border: 1px solid $brand--primary;
+    background: $brand--primary;
+    color: #000;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  @include button;
+}

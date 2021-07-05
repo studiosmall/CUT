@@ -1,0 +1,83 @@
+.header {
+  padding: 25px 0 25px 0;
+  position: relative;
+  z-index: 10;
+
+  @include breakpoint(medium) {
+    padding: 25px 0 20px 0;
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__container {
+    border-top: 1px solid $brand--secondary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+
+  // &__left,
+  // &__center,
+  // &__right {
+  //   width: ;
+  // }
+
+  &__brand {
+    svg {
+      width: auto;
+      height: 23px;
+    }
+  }
+
+  nav {
+    ul {
+      li {
+        margin: 0 35px 0 0;
+
+        &:last-of-type {
+          margin: 0;
+        }
+
+        &.current-menu-item {
+          a {
+            color: $brand--primary;
+          }
+        }
+
+        a {
+          @include nav;
+        }
+      }
+    }
+  }
+}
+
+  // Hide controls
+  .plyr--video.plyr--hide-controls .plyr__controls {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0%);
+
+      @include breakpoint(medium) {
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(100%);
+      }
+  }
+
+// mobile play video fix
+@media screen and (max-width: 500px) {
+  .plyr .plyr__controls button[data-plyr=pip],
+  .plyr .plyr__controls button[data-plyr=mute],
+  .plyr .plyr__controls button[data-plyr=volume] {
+      display: block;
+  }
+  .plyr--video.plyr--hide-controls .plyr__controls {
+      opacity: 1;
+      pointer-events: none;
+  }
+}
+

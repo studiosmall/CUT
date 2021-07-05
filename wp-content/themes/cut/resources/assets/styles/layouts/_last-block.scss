@@ -1,0 +1,31 @@
+.last-block {
+  border: 1px solid $brand--primary;
+  background-color: $brand--primary;
+
+  &__inner {
+    padding: 33px 29px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include section-height;
+  }
+
+  a {
+    @include title(#000);
+
+    font-family: $font--body;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .bottom {
+    align-self: flex-start;
+
+    h2 {
+      @include title($brand--primary);
+    }
+  }
+}
