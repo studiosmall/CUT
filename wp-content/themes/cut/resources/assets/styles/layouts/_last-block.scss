@@ -2,6 +2,17 @@
   border: 1px solid $brand--primary;
   background-color: $brand--primary;
 
+  a {
+    @include title($bg);
+
+    font-weight: 100;
+    font-family: $font--body;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &__inner {
     padding: 33px 29px;
 
@@ -11,21 +22,44 @@
     @include section-height;
   }
 
-  a {
+  &__top {
+    align-self: flex-start;
+  }
+
+  &__bottom {
+    align-self: flex-start;
+
     @include title(#000);
+    font-weight: 100;
 
-    font-family: $font--body;
+    a {
+      @include hoverline($bg);
+      @include title($bg);
 
-    &:hover {
-      text-decoration: none;
+      text-transform: none;
+      font-weight: 100;
+
+      &::after {
+        bottom: 2px;
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    .newsletter {
+      padding: 15px 0 0 0;
+
+      h4 {
+        @include title($bg);
+      }
     }
   }
 
-  .bottom {
-    align-self: flex-start;
-
-    h2 {
-      @include title($brand--primary);
-    }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -18,7 +18,7 @@ export default {
     //      /* some options */ 
     //      vertical: false,
     //     horizontal: true,  
-        
+
     //    }, '#main');
     // }, false);
 
@@ -36,12 +36,20 @@ export default {
         scrollContainer.scrollLeft += evt.deltaY;
     });
 
+    // Set page div width
+    $(window).on('load resize',function(){
+    let totalWidth = 0;
 
-    // var SweetScroll = new SweetScroll({
-    //   vertical: false,
-    //   horizontal: true,
-    // }, '#main');
-  
+        $('section.section').each(function() {
+          totalWidth += parseInt($(this).outerWidth() + 40, 10);
+          console.log(totalWidth);
+        });
+
+        $('.horizontal-container').css('min-width', totalWidth + 6);
+
+        // let singleWidth = $('.last-block').width();
+        // console.log(singleWidth + ' new')
+    });
 
   },
 };

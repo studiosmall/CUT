@@ -7294,7 +7294,7 @@ Router.prototype.loadEvents = function loadEvents () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweet_scroll__ = __webpack_require__(10);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweet_scroll__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sweet_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sweet_scroll__);
 //import Plyr from 'plyr';
 
@@ -7316,7 +7316,7 @@ Router.prototype.loadEvents = function loadEvents () {
     //      /* some options */ 
     //      vertical: false,
     //     horizontal: true,  
-        
+
     //    }, '#main');
     // }, false);
 
@@ -7334,16 +7334,25 @@ Router.prototype.loadEvents = function loadEvents () {
         scrollContainer.scrollLeft += evt.deltaY;
     });
 
+    // Set page div width
+    $(window).on('load resize',function(){
+    var totalWidth = 0;
 
-    // var SweetScroll = new SweetScroll({
-    //   vertical: false,
-    //   horizontal: true,
-    // }, '#main');
-  
+        $('section.section').each(function() {
+          totalWidth += parseInt($(this).outerWidth() + 40, 10);
+          console.log(totalWidth);
+        });
+
+        $('.horizontal-container').css('min-width', totalWidth + 6);
+
+        // let singleWidth = $('.last-block').width();
+        // console.log(singleWidth + ' new')
+    });
 
   },
 });
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 10 */

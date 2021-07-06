@@ -30,4 +30,19 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+        /**
+     * Post
+     */
+    function options(){
+
+        global $post;
+
+        $options = array (
+            'email'       => get_field('email', 'options'),
+            'phone'       => get_field('phone', 'options'),
+        );
+
+        return $options;
+     }
 }

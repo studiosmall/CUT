@@ -29,37 +29,37 @@
     window.player = player;
 
   jQuery( document ).ready(function() {
-      
+
       jQuery('body').click();
-      
+
       setTimeout(function(){
         player.play(); // eslint-disable-line no-undef
       }, 1500)
-        
+
     });
 
   </script> --}}
 
-    <div>
+    <div id="first" class="horizontal-container">
 
-    @include('partials.content-blocks')
-    @include('partials.last_block')
+      @include('partials.content-blocks')
+      @include('partials.last_block')
 
-{{--       
-      <section class="section" id="third">
-        <div class="section__inner">
-          <div class="section__header">
-            <h2 class="section__title">3. Third</h2>
-            <p class="section__lead">This is third content.</p>
-          </div>
-          <div class="section__body">
-            <ul class="list--inline">
-              <li><button class="btn btn--ghost" data-scroll="#second"><i class="icon-angle-left"></i>Prev page</button></li>
-              <li><button class="btn btn--ghost" data-scroll="#fourth">Next page<i class="icon-angle-right"></i></button></li>
-            </ul>
-          </div>
-        </div>
-      </section> --}}
+      {{--
+            <section class="section" id="third">
+              <div class="section__inner">
+                <div class="section__header">
+                  <h2 class="section__title">3. Third</h2>
+                  <p class="section__lead">This is third content.</p>
+                </div>
+                <div class="section__body">
+                  <ul class="list--inline">
+                    <li><button class="btn btn--ghost" data-scroll="#second"><i class="icon-angle-left"></i>Prev page</button></li>
+                    <li><button class="btn btn--ghost" data-scroll="#fourth">Next page<i class="icon-angle-right"></i></button></li>
+                  </ul>
+                </div>
+              </div>
+            </section> --}}
     </div>
 
   @endwhile

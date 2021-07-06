@@ -19410,6 +19410,36 @@ strong {
 
 /* line 5, resources/assets/styles/layouts/_last-block.scss */
 
+.last-block a {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-weight: 100;
+  font-family: "Calibre", arial, sans-serif;
+}
+
+@media (min-width: 900px) {
+  /* line 5, resources/assets/styles/layouts/_last-block.scss */
+
+  .last-block a {
+    font-size: 17px;
+  }
+}
+
+/* line 11, resources/assets/styles/layouts/_last-block.scss */
+
+.last-block a:hover {
+  text-decoration: none;
+}
+
+/* line 16, resources/assets/styles/layouts/_last-block.scss */
+
 .last-block__inner {
   padding: 33px 29px;
   display: -webkit-box;
@@ -19426,9 +19456,18 @@ strong {
   height: 100%;
 }
 
-/* line 14, resources/assets/styles/layouts/_last-block.scss */
+/* line 25, resources/assets/styles/layouts/_last-block.scss */
 
-.last-block a {
+.last-block__top {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+/* line 29, resources/assets/styles/layouts/_last-block.scss */
+
+.last-block__bottom {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 17px;
@@ -19438,35 +19477,111 @@ strong {
   padding: 0;
   margin: 0;
   font-weight: 500;
-  font-family: "Calibre", arial, sans-serif;
+  font-weight: 100;
 }
 
 @media (min-width: 900px) {
-  /* line 14, resources/assets/styles/layouts/_last-block.scss */
+  /* line 29, resources/assets/styles/layouts/_last-block.scss */
 
-  .last-block a {
+  .last-block__bottom {
     font-size: 17px;
   }
 }
 
-/* line 19, resources/assets/styles/layouts/_last-block.scss */
+/* line 35, resources/assets/styles/layouts/_last-block.scss */
 
-.last-block a:hover {
+.last-block__bottom a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  text-transform: none;
+  font-weight: 100;
+}
+
+/* line 43, resources/assets/styles/common/_mixins.scss */
+
+.last-block__bottom a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+       -o-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: #000;
+  -webkit-transform-origin: bottom;
+       -o-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+/* line 56, resources/assets/styles/common/_mixins.scss */
+
+.last-block__bottom a:hover {
   text-decoration: none;
 }
 
-/* line 24, resources/assets/styles/layouts/_last-block.scss */
+@media (min-width: 900px) {
+  /* line 60, resources/assets/styles/common/_mixins.scss */
 
-.last-block .bottom {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  .last-block__bottom a:hover::after {
+    -webkit-transform: scaleX(1);
+         -o-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: bottom;
+         -o-transform-origin: bottom;
+            transform-origin: bottom;
+  }
 }
 
-/* line 27, resources/assets/styles/layouts/_last-block.scss */
+@media (min-width: 900px) {
+  /* line 35, resources/assets/styles/layouts/_last-block.scss */
 
-.last-block .bottom h2 {
+  .last-block__bottom a {
+    font-size: 17px;
+  }
+}
+
+/* line 42, resources/assets/styles/layouts/_last-block.scss */
+
+.last-block__bottom a::after {
+  bottom: 2px;
+}
+
+/* line 47, resources/assets/styles/layouts/_last-block.scss */
+
+.last-block__bottom span {
+  display: block;
+}
+
+/* line 51, resources/assets/styles/layouts/_last-block.scss */
+
+.last-block__bottom .newsletter {
+  padding: 15px 0 0 0;
+}
+
+/* line 54, resources/assets/styles/layouts/_last-block.scss */
+
+.last-block__bottom .newsletter h4 {
   font-family: "reader", arial, sans-serif;
-  color: #fff;
+  color: #000;
   font-size: 17px;
   letter-spacing: 0.5px;
   line-height: 21px;
@@ -19477,11 +19592,25 @@ strong {
 }
 
 @media (min-width: 900px) {
-  /* line 27, resources/assets/styles/layouts/_last-block.scss */
+  /* line 54, resources/assets/styles/layouts/_last-block.scss */
 
-  .last-block .bottom h2 {
+  .last-block__bottom .newsletter h4 {
     font-size: 17px;
   }
+}
+
+/* line 60, resources/assets/styles/layouts/_last-block.scss */
+
+.last-block__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* line 1, resources/assets/styles/layouts/_tinymce.scss */
