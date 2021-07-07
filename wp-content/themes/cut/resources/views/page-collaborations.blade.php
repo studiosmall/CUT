@@ -6,7 +6,7 @@
     {{-- @include('partials.content-blocks')
     @include('partials.content-page') --}}
 
-      @include('partials.content-blocks')
+      @include('partials.collaboration')
       @include('partials.last_block')
 
   @endwhile

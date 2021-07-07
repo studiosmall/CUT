@@ -53,6 +53,54 @@
 
       h4 {
         @include title($bg);
+
+        margin: 0 0 10px 0;
+      }
+
+      input {
+        border: 1px solid $bg;
+        border-radius: 0;
+        padding: 10px;
+        // font-size: 12px;
+
+        &:focus {
+          border: 1px solid $bg;
+          border-radius: 0;
+        }
+      }
+
+      #fieldEmail {
+        width: 100%;
+      }
+
+      &__container {
+        position: relative;
+      }
+
+      &__agree {
+        display: flex;
+        align-items: baseline;
+        text-transform: initial;
+        padding: 10px 0 0 0;
+
+        label {
+          padding: 0 0 0 10px;
+        }
+      }
+
+      button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 11px;
+        right: -5px;
+        background-color: transparent;
+        border: none;
+
+        .ico-arrow {
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -61,5 +109,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__by {
+    padding: 20px 0 0 0;
+    display: block;
+    font-size: 12px;
+
+    a {
+      font-size: 12px;
+    }
   }
 }

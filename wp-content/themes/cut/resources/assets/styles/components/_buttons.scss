@@ -17,6 +17,7 @@
     border: 1px solid $brand--primary;
     background: $brand--primary;
     color: #000;
+    text-decoration: none;
   }
 
   &:focus {
@@ -26,4 +27,18 @@
 
 .btn {
   @include button;
+}
+
+.btn-alt {
+  @include button;
+
+  border: 1px solid $brand--primary;
+  background: $brand--primary;
+  color: #000;
+
+  &:hover {
+    background: transparent;
+    border: 1px solid $brand--secondary;
+    color: $brand--primary;
+  }
 }

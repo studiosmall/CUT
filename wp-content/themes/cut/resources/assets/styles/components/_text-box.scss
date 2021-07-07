@@ -16,4 +16,13 @@
       @include title($brand--primary);
     }
   }
+
+  a {
+    @include paragraph;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+      text-decoration: none;
+    }
+  }
 }

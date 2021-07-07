@@ -40,7 +40,7 @@
 
   </script> --}}
 
-    <div id="first" class="horizontal-container">
+
 
       @include('partials.content-blocks')
       @include('partials.last_block')
@@ -60,7 +60,7 @@
                 </div>
               </div>
             </section> --}}
-    </div>
+
 
   @endwhile
 @endsection

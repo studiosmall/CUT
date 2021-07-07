@@ -8,13 +8,10 @@
       {{-- <div class="wrap__inner"> --}}
         <div class="content">
           <main id="main" class="main">
-            @yield('content')
+            <div id="first" class="horizontal-container">
+              @yield('content')
+            </div>
           </main>
-          @if (App\display_sidebar())
-            <aside class="sidebar">
-              @include('partials.sidebar')
-            </aside>
-          @endif
         </div>
       {{-- </div> --}}
     </div>

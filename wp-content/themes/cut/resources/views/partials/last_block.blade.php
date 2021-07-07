@@ -49,7 +49,25 @@
 
 				<div class="newsletter">
 					<h4>SIGN UP TO THE NEWSLETTER</h4>
+
+						<form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="30FEA77E7D0A9B8D7616376B9006323156518BEEA8901BAC616DE398ABBA8F2A570532256E34FA417B350265C53FF40A38CDE7CA33D4E39EDB389E49CD2C7C87">
+							<div class="newsletter__container">
+								<input autocomplete="Email" placeholder="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-ykjddtl-ykjddtl" required="" type="email">
+								<button type="submit"><span class="ico-arrow"></span></button>
+							</div>
+
+							<div class="newsletter__agree">
+								<input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox">
+								<label for="cm-privacy-consent">I agree to be emailed</label>
+								<input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
+							</div>
+
+						</form>
+						<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+
 				</div>
+
+				<span class="last-block__by">site by — <a href="https://studiosmall.com" target="_blank" rel="nofollow noopener noreferrer">StudioSmall</a></span>
 
 			</div>
 
