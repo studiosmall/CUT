@@ -1,5 +1,40 @@
+.home {
+  .logo-active {
+    .plyr__control,
+    .plyr__controls__item {
+      opacity: 0;
+    }
+  }
+
+  .header {
+    @include breakpoint(medium) {
+      &__center {
+        justify-content: end;
+      }
+
+      &__brand {
+        svg {
+          top: -12px;
+          position: absolute;
+          width: auto;
+          width: 100%;
+          transform: translateY(0);
+          transition: 1s;
+          transition-timing-function: ease-out;
+          height: 23px;
+    
+          &.active {
+            transform: translateY(39vh);
+            height: 230px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .header {
-  padding: 25px 0 25px 0;
+  padding: 17px 0 17px 0;
   position: relative;
   z-index: 10;
 
@@ -12,23 +47,62 @@
   }
 
   &__container {
-    border-top: 1px solid $brand--secondary;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
+    padding: 4px 0;
+
+    @include breakpoint(medium) {
+      padding: 14px 0;
+      border-top: 1px solid $brand--secondary;
+    }
   }
 
-  // &__left,
-  // &__center,
-  // &__right {
-  //   width: ;
-  // }
+  .nav-primary {
+    display: none;
+
+    @include breakpoint(medium) {
+      display: initial;
+    }
+  }
+
+  &__left {
+    display: none;
+
+    @include breakpoint(medium) {
+      display: initial;
+    }
+  }
+
+  &__left,
+  &__center,
+  &__right {
+    width: 33.33%;
+  }
+
+  &__center {
+    position: relative;
+    display: flex;
+    justify-content: left;
+
+    @include breakpoint(medium) {
+      justify-content: center;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   &__brand {
     svg {
       width: auto;
-      height: 23px;
+      height: 32px;
+
+      @include breakpoint(medium) {
+        height: 23px;
+      }
     }
   }
 
@@ -53,20 +127,195 @@
       }
     }
   }
+
+  &__hamburger {
+    margin: -4px -1px 0 0;
+	  padding: 0;
+	  color: #fff;
+	  background: transparent;
+	  border: 0;
+	  height: 24px;
+	  display: block;
+
+		@include breakpoint(medium) {
+			margin: -14px 2px 0 0;
+      display: none;
+		}
+
+	  &:focus {
+	    outline:0;
+	  }
+
+	  @mixin line {
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 35px;
+	    height: 3px;
+	    background: #3f3f3f;
+	    border-radius: 0;
+	    transition: 0.2s;
+	  }
+
+	  .lines {
+	    //create middle line
+	    @include line;
+	    position: relative;
+      background: transparent;
+
+      &::before,
+      &::after {
+        @include line;
+          position: absolute;
+          content: "";
+          transform-origin: 35px/14 center;
+          left:0;
+        }
+        &::before {
+          top: 5px;
+        }
+        &::after {
+          top: -5px;
+        }
+	  }
+
+	  .lines-button:hover {
+	    opacity: 1;
+	  }
+
+	  &.active {
+	    .lines {
+	      background: transparent;
+	      border:0;
+
+        &::before,
+        &::after {
+	        transform-origin: 50% 50%;
+	        top:0;
+	        width: 30px;
+	      }
+
+	      &::before {
+	        transform: rotate3d(0, 0, 1, 45deg);
+        }
+
+	      &::after {
+	        transform: rotate3d(0, 0, 1, -45deg);
+	      }
+	    }
+	  }
+	}
 }
 
-  // Hide controls
-  .plyr--video.plyr--hide-controls .plyr__controls {
-      opacity: 1;
-      pointer-events: all;
-      transform: translateY(0%);
+.off-canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+	background: $bg;
+	z-index: 5;
+	width: 100vw;
+  min-height: calc(82vh - 74px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all ease 0.3s;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	max-width: 500px;
+  padding: 10px 20px 20px 20px;
+
+  @include breakpoint(medium) {
+    min-height: calc(100vh - 105px);
+  }
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+
+		@include breakpoint(medium) {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-100%);
+		}
+	}
+	&__inner {
+		border: 1px solid $brand--secondary;
+		padding: 40px 20px;
+    margin: 70px 0 0 0;
+    height: 100%;
+    min-height: calc(82vh - 74px);
+
+    @include breakpoint(medium) {
+      min-height: calc(100vh - 105px);
+    }
+	}
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0 0 0;
+
+    svg {
+      width: auto;
+      height: 32px;
+
+      path {
+        fill: $brand--primary;
+      }
 
       @include breakpoint(medium) {
-          opacity: 0;
-          pointer-events: none;
-          transform: translateY(100%);
+        height: 23px;
       }
+    }
   }
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0 0 60px 0;
+      display: block;
+      width: 100%;
+
+      &.current-menu-item {
+        a {
+          color: $brand--secondary;
+        }
+      }
+
+			a {
+				color: $brand--primary;
+				text-decoration: none;
+				display: inline-block;
+        width: auto;
+        font-family: $font--body;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        text-transform: uppercase;
+			}
+		}
+	}
+}
+
+// Hide controls
+.plyr--video.plyr--hide-controls .plyr__controls {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0%);
+
+    @include breakpoint(medium) {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(100%);
+    }
+}
 
 // mobile play video fix
 @media screen and (max-width: 500px) {

@@ -1,15 +1,12 @@
 .portrait {
+  @include section-height;
+
   background-size: cover;
   background-position: 50% 0;
 	width: 100%;
-	height: 86.5vh;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
-
-  @include breakpoint(medium) {
-    height: calc(100vh - 125px);
-	}
 
   &__inner {
     padding: 33px 29px;

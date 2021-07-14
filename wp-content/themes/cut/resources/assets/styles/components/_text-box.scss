@@ -7,6 +7,13 @@
     justify-content: space-between;
     flex-direction: column;
     @include section-height;
+    max-height: 600px;
+    overflow-x: scroll;
+
+    @include breakpoint(medium) {
+      max-height: 100%;
+      overflow-x: initial;
+    }
   }
 
   .bottom {

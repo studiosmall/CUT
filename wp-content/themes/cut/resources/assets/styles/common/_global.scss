@@ -46,7 +46,10 @@ img {
 // }
 
 .plyr {
+  width: 100vw;
+
   .plyr__control--overlaid {
+    opacity: 1;
     background: rgba(#64656A, 0.8);
     width: 60px;
     justify-content: center;
@@ -56,6 +59,7 @@ img {
     align-items: center;
     background: black;
     margin-top: 10px;
+    transition: $transition;
     @include breakpoint (medium) {
       margin-top: 0;
     }
@@ -63,6 +67,12 @@ img {
 
   input[type=range] {
     color: #64656A;
+  }
+
+  .plyr__control,
+  .plyr__controls__item {
+    opacity: 1;
+    transition: $transition;
   }
 
   .plyr__control.plyr__tab-focus {
@@ -92,12 +102,47 @@ img {
 
 .section {
   float: left;
-  width: calc(40vw - 40px);
-  min-height: calc(100vh - 125px);
-  margin: 100px 20px 25px 20px;
+  width: calc(100vw - 40px);
+  margin: 80px 10px 25px 10px;
+
+  @include breakpoint(medium) {
+    width: calc(40vw - 20px);
+    margin: 100px 10px 25px 10px;
+  }
+
+  &:first-of-type {
+    margin-left: 20px;
+  }
+
+  &.video {
+    width: calc(100vw - 40px);
+    min-height: calc(100vh - 125px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__inner {
     @include inner;
+  }
+}
+
+.video {
+  &__logo {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    svg {
+      height: 200px;
+      width: auto;
+      width: 100%;
+      padding: 0 50px;
+    }
   }
 }
 

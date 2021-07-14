@@ -13,7 +13,11 @@
 			</div>
 
 			<div class="bottom">
-				<h2>{!! $c['title'] !!}</h2>
+				@if(is_single())
+					<h2>{!! get_the_title() !!} — {{ get_the_date('F Y') }}</h2>
+				@else
+					<h2>{!! $c['title'] !!}</h2>
+				@endif
 			</div>
 
 	</div>

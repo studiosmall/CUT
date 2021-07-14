@@ -327,13 +327,13 @@
                 "layout_60e542f231d0a": {
                     "key": "layout_60e542f231d0a",
                     "name": "current_collaboratiors",
-                    "label": "CURRENT COLLABORATIORS",
+                    "label": "Current Collaborators",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_60e542fd31d0b",
-                            "label": "Collaboratiors",
-                            "name": "collaboratiors",
+                            "label": "Collaborators",
+                            "name": "collaborators",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -429,6 +429,13 @@
                 "operator": "==",
                 "value": "collaboration"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
         ]
     ],
     "menu_order": 0,
@@ -452,5 +459,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1625637716
+    "modified": 1625715069
 }

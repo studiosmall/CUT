@@ -126,24 +126,33 @@
 // }
 
 @mixin section-height {
-  min-height: calc(100vh - 125px);
+  min-height: calc(82vh - 74px);
   height: 100%;
+
+  @include breakpoint(medium) {
+    min-height: calc(100vh - 125px);
+  }
 }
 
 @mixin paragraph {
   font-family: $font--body;
   color: $brand--primary;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 14px;
+
+  @include breakpoint(medium) {
+    font-size: 17px;
+    line-height: 21px;
+  }
 }
 
 @mixin title($color) {
-  font-family: $font--heading;
+  font-family: $font--body;
   color: $color;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -151,6 +160,7 @@
 
   @include breakpoint(medium) {
     font-size: 17px;
+    line-height: 21px;
     // line-height: 24px;
   }
 }

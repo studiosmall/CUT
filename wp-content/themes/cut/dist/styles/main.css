@@ -18739,9 +18739,18 @@ body {
 p {
   font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 14px;
+}
+
+@media (min-width: 900px) {
+  /* line 17, resources/assets/styles/common/_global.scss */
+
+  p {
+    font-size: 17px;
+    line-height: 21px;
+  }
 }
 
 /* line 21, resources/assets/styles/common/_global.scss */
@@ -18773,9 +18782,16 @@ img {
   }
 }
 
-/* line 49, resources/assets/styles/common/_global.scss */
+/* line 48, resources/assets/styles/common/_global.scss */
+
+.plyr {
+  width: 100vw;
+}
+
+/* line 51, resources/assets/styles/common/_global.scss */
 
 .plyr .plyr__control--overlaid {
+  opacity: 1;
   background: rgba(100, 101, 106, 0.8);
   width: 60px;
   -webkit-box-pack: center;
@@ -18791,30 +18807,43 @@ img {
           align-items: center;
   background: black;
   margin-top: 10px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 @media (min-width: 900px) {
-  /* line 49, resources/assets/styles/common/_global.scss */
+  /* line 51, resources/assets/styles/common/_global.scss */
 
   .plyr .plyr__control--overlaid {
     margin-top: 0;
   }
 }
 
-/* line 64, resources/assets/styles/common/_global.scss */
+/* line 68, resources/assets/styles/common/_global.scss */
 
 .plyr input[type=range] {
   color: #64656A;
 }
 
-/* line 68, resources/assets/styles/common/_global.scss */
+/* line 72, resources/assets/styles/common/_global.scss */
+
+.plyr .plyr__control,
+.plyr .plyr__controls__item {
+  opacity: 1;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 78, resources/assets/styles/common/_global.scss */
 
 .plyr .plyr__control.plyr__tab-focus {
   -webkit-box-shadow: 0 0 0 5px rgba(100, 101, 106, 0.5);
           box-shadow: 0 0 0 5px rgba(100, 101, 106, 0.5);
 }
 
-/* line 72, resources/assets/styles/common/_global.scss */
+/* line 82, resources/assets/styles/common/_global.scss */
 
 .plyr .plyr__control.plyr__tab-focus,
 .plyr .plyr__control:hover,
@@ -18822,7 +18851,7 @@ img {
   background: #64656A;
 }
 
-/* line 77, resources/assets/styles/common/_global.scss */
+/* line 87, resources/assets/styles/common/_global.scss */
 
 #main {
   position: absolute;
@@ -18835,23 +18864,54 @@ img {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 88, resources/assets/styles/common/_global.scss */
+/* line 98, resources/assets/styles/common/_global.scss */
 
 #main > div {
   min-width: 534vw;
   width: 100%;
 }
 
-/* line 93, resources/assets/styles/common/_global.scss */
+/* line 103, resources/assets/styles/common/_global.scss */
 
 .section {
   float: left;
-  width: calc(40vw - 40px);
-  min-height: calc(100vh - 125px);
-  margin: 100px 20px 25px 20px;
+  width: calc(100vw - 40px);
+  margin: 80px 10px 25px 10px;
 }
 
-/* line 99, resources/assets/styles/common/_global.scss */
+@media (min-width: 900px) {
+  /* line 103, resources/assets/styles/common/_global.scss */
+
+  .section {
+    width: calc(40vw - 20px);
+    margin: 100px 10px 25px 10px;
+  }
+}
+
+/* line 113, resources/assets/styles/common/_global.scss */
+
+.section:first-of-type {
+  margin-left: 20px;
+}
+
+/* line 117, resources/assets/styles/common/_global.scss */
+
+.section.video {
+  width: calc(100vw - 40px);
+  min-height: calc(100vh - 125px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 126, resources/assets/styles/common/_global.scss */
 
 .section__inner {
   padding: 0 23px;
@@ -18859,21 +18919,47 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 99, resources/assets/styles/common/_global.scss */
+  /* line 126, resources/assets/styles/common/_global.scss */
 
   .section__inner {
     padding: 0 23px;
   }
 }
 
-/* line 104, resources/assets/styles/common/_global.scss */
+/* line 132, resources/assets/styles/common/_global.scss */
+
+.video__logo {
+  position: absolute;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+/* line 140, resources/assets/styles/common/_global.scss */
+
+.video__logo svg {
+  height: 200px;
+  width: auto;
+  width: 100%;
+  padding: 0 50px;
+}
+
+/* line 149, resources/assets/styles/common/_global.scss */
 
 .scoll-content {
   height: 100vh;
   width: 100vw;
 }
 
-/* line 109, resources/assets/styles/common/_global.scss */
+/* line 154, resources/assets/styles/common/_global.scss */
 
 .ico-arrow {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNnB4IiBoZWlnaHQ9IjEzcHgiIHZpZXdCb3g9IjAgMCA2IDEzIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPlBhdGggMiBDb3B5IDQ8L3RpdGxlPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkhvbWVwYWdlLVNjcm9sbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcyODMuMDAwMDAwLCAtMTA0LjAwMDAwMCkiIHN0cm9rZT0iIzAwMDAwMCI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0xMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzI1Ny4wMDAwMDAsIDc3LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlsaW5lIGlkPSJQYXRoLTItQ29weS00IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOS4wMDAwMDAsIDMzLjUwMDAwMCkgcm90YXRlKDE4MC4wMDAwMDApIHRyYW5zbGF0ZSgtMjkuMDAwMDAwLCAtMzMuNTAwMDAwKSAiIHBvaW50cz0iMjYgMjggMzIgMzMuNSAyNiAzOSI+PC9wb2x5bGluZT4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
@@ -19058,25 +19144,44 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100vh - 125px);
+  min-height: calc(82vh - 74px);
   height: 100%;
+  max-height: 600px;
+  overflow-x: scroll;
 }
 
-/* line 12, resources/assets/styles/components/_text-box.scss */
+@media (min-width: 900px) {
+  /* line 3, resources/assets/styles/components/_text-box.scss */
+
+  .textbox__inner {
+    min-height: calc(100vh - 125px);
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 3, resources/assets/styles/components/_text-box.scss */
+
+  .textbox__inner {
+    max-height: 100%;
+    overflow-x: initial;
+  }
+}
+
+/* line 19, resources/assets/styles/components/_text-box.scss */
 
 .textbox .bottom {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-/* line 15, resources/assets/styles/components/_text-box.scss */
+/* line 22, resources/assets/styles/components/_text-box.scss */
 
 .textbox .bottom h2 {
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19084,26 +19189,165 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 15, resources/assets/styles/components/_text-box.scss */
+  /* line 22, resources/assets/styles/components/_text-box.scss */
 
   .textbox .bottom h2 {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
-/* line 20, resources/assets/styles/components/_text-box.scss */
+/* line 27, resources/assets/styles/components/_text-box.scss */
 
 .textbox a {
   font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 14px;
 }
 
-/* line 23, resources/assets/styles/components/_text-box.scss */
+@media (min-width: 900px) {
+  /* line 27, resources/assets/styles/components/_text-box.scss */
+
+  .textbox a {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+/* line 30, resources/assets/styles/components/_text-box.scss */
 
 .textbox a:hover {
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+}
+
+/* line 1, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators {
+  border: 1px solid #7f7f7f;
+}
+
+/* line 3, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators__inner {
+  padding: 33px 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(82vh - 74px);
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 3, resources/assets/styles/components/_collaborators.scss */
+
+  .collaborators__inner {
+    min-height: calc(100vh - 125px);
+  }
+}
+
+/* line 12, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators__item {
+  padding: 15px 0 20px 0;
+}
+
+/* line 15, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators__item .btn,
+.collaborators__item .comment-form input[type="submit"],
+.comment-form .collaborators__item input[type="submit"],
+.collaborators__item .search-form .search-submit,
+.search-form .collaborators__item .search-submit {
+  margin: 15px 0 0 0;
+  width: 190px;
+}
+
+/* line 21, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators h2 {
+  font-family: "Calibre", arial, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 11px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  padding: 0 0 20px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 21, resources/assets/styles/components/_collaborators.scss */
+
+  .collaborators h2 {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+/* line 27, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators h3 {
+  font-family: "Calibre", arial, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 11px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.27px;
+  line-height: 14px;
+  text-transform: none;
+  font-weight: initial;
+}
+
+@media (min-width: 900px) {
+  /* line 27, resources/assets/styles/components/_collaborators.scss */
+
+  .collaborators h3 {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+/* line 37, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators a {
+  font-family: "Calibre", arial, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  line-height: 0;
+  padding: 15px 0 13px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 37, resources/assets/styles/components/_collaborators.scss */
+
+  .collaborators a {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+/* line 43, resources/assets/styles/components/_collaborators.scss */
+
+.collaborators a:hover {
   border-bottom: 1px solid #fff;
   text-decoration: none;
 }
@@ -19128,8 +19372,16 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100vh - 125px);
+  min-height: calc(82vh - 74px);
   height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 3, resources/assets/styles/components/_product.scss */
+
+  .product__inner {
+    min-height: calc(100vh - 125px);
+  }
 }
 
 /* line 12, resources/assets/styles/components/_product.scss */
@@ -19144,21 +19396,39 @@ img {
   padding: 0 0 15px 0;
 }
 
-/* line 20, resources/assets/styles/components/_product.scss */
+/* line 19, resources/assets/styles/components/_product.scss */
+
+.product__image img {
+  width: auto;
+  max-height: 200px;
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 19, resources/assets/styles/components/_product.scss */
+
+  .product__image img {
+    width: auto;
+    height: auto;
+    max-height: 500px;
+  }
+}
+
+/* line 32, resources/assets/styles/components/_product.scss */
 
 .product .bottom {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-/* line 24, resources/assets/styles/components/_product.scss */
+/* line 36, resources/assets/styles/components/_product.scss */
 
 .product h2 {
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19167,20 +19437,22 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 24, resources/assets/styles/components/_product.scss */
+  /* line 36, resources/assets/styles/components/_product.scss */
 
   .product h2 {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
 /* line 1, resources/assets/styles/components/_portrait.scss */
 
 .portrait {
+  min-height: calc(82vh - 74px);
+  height: 100%;
   background-size: cover;
   background-position: 50% 0;
   width: 100%;
-  height: 86.5vh;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -19190,11 +19462,11 @@ img {
   /* line 1, resources/assets/styles/components/_portrait.scss */
 
   .portrait {
-    height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);
   }
 }
 
-/* line 14, resources/assets/styles/components/_portrait.scss */
+/* line 11, resources/assets/styles/components/_portrait.scss */
 
 .portrait__inner {
   padding: 33px 29px;
@@ -19203,26 +19475,37 @@ img {
 /* line 1, resources/assets/styles/components/_landscape.scss */
 
 .landscape {
+  min-width: 600px;
   width: calc(80vw - 40px);
 }
 
-/* line 4, resources/assets/styles/components/_landscape.scss */
+@media (min-width: 900px) {
+  /* line 1, resources/assets/styles/components/_landscape.scss */
+
+  .landscape {
+    width: calc(80vw - 40px);
+    min-width: auto;
+  }
+}
+
+/* line 10, resources/assets/styles/components/_landscape.scss */
 
 .landscape__image {
+  min-height: calc(82vh - 74px);
+  height: 100%;
   background-size: cover;
   background-position: 50% 0;
   width: 100%;
-  height: 86.5vh;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
 @media (min-width: 900px) {
-  /* line 4, resources/assets/styles/components/_landscape.scss */
+  /* line 10, resources/assets/styles/components/_landscape.scss */
 
   .landscape__image {
-    height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);
   }
 }
 
@@ -19248,8 +19531,16 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: calc(100vh - 125px);
+  min-height: calc(82vh - 74px);
   height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 6, resources/assets/styles/components/_divider-title.scss */
+
+  .divider-title__inner {
+    min-height: calc(100vh - 125px);
+  }
 }
 
 /* line 15, resources/assets/styles/components/_divider-title.scss */
@@ -19263,11 +19554,11 @@ img {
 /* line 23, resources/assets/styles/components/_divider-title.scss */
 
 .divider-title__container h2 {
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #000;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19282,26 +19573,72 @@ img {
 
   .divider-title__container h2 {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
-/* line 1, resources/assets/styles/layouts/_header.scss */
+/* line 3, resources/assets/styles/layouts/_header.scss */
+
+.home .logo-active .plyr__control,
+.home .logo-active .plyr__controls__item {
+  opacity: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 11, resources/assets/styles/layouts/_header.scss */
+
+  .home .header__center {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+
+  /* line 16, resources/assets/styles/layouts/_header.scss */
+
+  .home .header__brand svg {
+    top: -12px;
+    position: absolute;
+    width: auto;
+    width: 100%;
+    -webkit-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    height: 23px;
+  }
+
+  /* line 26, resources/assets/styles/layouts/_header.scss */
+
+  .home .header__brand svg.active {
+    -webkit-transform: translateY(39vh);
+         -o-transform: translateY(39vh);
+            transform: translateY(39vh);
+    height: 230px;
+  }
+}
+
+/* line 36, resources/assets/styles/layouts/_header.scss */
 
 .header {
-  padding: 25px 0 25px 0;
+  padding: 17px 0 17px 0;
   position: relative;
   z-index: 10;
 }
 
 @media (min-width: 900px) {
-  /* line 1, resources/assets/styles/layouts/_header.scss */
+  /* line 36, resources/assets/styles/layouts/_header.scss */
 
   .header {
     padding: 25px 0 20px 0;
   }
 }
 
-/* line 10, resources/assets/styles/layouts/_header.scss */
+/* line 45, resources/assets/styles/layouts/_header.scss */
 
 .header__inner {
   padding: 0 23px;
@@ -19309,17 +19646,16 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 10, resources/assets/styles/layouts/_header.scss */
+  /* line 45, resources/assets/styles/layouts/_header.scss */
 
   .header__inner {
     padding: 0 23px;
   }
 }
 
-/* line 14, resources/assets/styles/layouts/_header.scss */
+/* line 49, resources/assets/styles/layouts/_header.scss */
 
 .header__container {
-  border-top: 1px solid #7f7f7f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19329,35 +19665,121 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 14px 0;
+  padding: 4px 0;
 }
 
-/* line 29, resources/assets/styles/layouts/_header.scss */
+@media (min-width: 900px) {
+  /* line 49, resources/assets/styles/layouts/_header.scss */
+
+  .header__container {
+    padding: 14px 0;
+    border-top: 1px solid #7f7f7f;
+  }
+}
+
+/* line 61, resources/assets/styles/layouts/_header.scss */
+
+.header .nav-primary {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  /* line 61, resources/assets/styles/layouts/_header.scss */
+
+  .header .nav-primary {
+    display: initial;
+  }
+}
+
+/* line 69, resources/assets/styles/layouts/_header.scss */
+
+.header__left {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  /* line 69, resources/assets/styles/layouts/_header.scss */
+
+  .header__left {
+    display: initial;
+  }
+}
+
+/* line 77, resources/assets/styles/layouts/_header.scss */
+
+.header__left,
+.header__center,
+.header__right {
+  width: 33.33%;
+}
+
+/* line 83, resources/assets/styles/layouts/_header.scss */
+
+.header__center {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+@media (min-width: 900px) {
+  /* line 83, resources/assets/styles/layouts/_header.scss */
+
+  .header__center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 93, resources/assets/styles/layouts/_header.scss */
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 99, resources/assets/styles/layouts/_header.scss */
 
 .header__brand svg {
   width: auto;
-  height: 23px;
+  height: 32px;
 }
 
-/* line 37, resources/assets/styles/layouts/_header.scss */
+@media (min-width: 900px) {
+  /* line 99, resources/assets/styles/layouts/_header.scss */
+
+  .header__brand svg {
+    height: 23px;
+  }
+}
+
+/* line 111, resources/assets/styles/layouts/_header.scss */
 
 .header nav ul li {
   margin: 0 35px 0 0;
 }
 
-/* line 40, resources/assets/styles/layouts/_header.scss */
+/* line 114, resources/assets/styles/layouts/_header.scss */
 
 .header nav ul li:last-of-type {
   margin: 0;
 }
 
-/* line 45, resources/assets/styles/layouts/_header.scss */
+/* line 119, resources/assets/styles/layouts/_header.scss */
 
 .header nav ul li.current-menu-item a {
   color: #fff;
 }
 
-/* line 50, resources/assets/styles/layouts/_header.scss */
+/* line 124, resources/assets/styles/layouts/_header.scss */
 
 .header nav ul li a {
   font-family: "Calibre", arial, sans-serif;
@@ -19378,7 +19800,272 @@ img {
   text-decoration: none;
 }
 
-/* line 59, resources/assets/styles/layouts/_header.scss */
+/* line 131, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger {
+  margin: -4px -1px 0 0;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  height: 24px;
+  display: block;
+}
+
+@media (min-width: 900px) {
+  /* line 131, resources/assets/styles/layouts/_header.scss */
+
+  .header__hamburger {
+    margin: -14px 2px 0 0;
+    display: none;
+  }
+}
+
+/* line 145, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger:focus {
+  outline: 0;
+}
+
+/* line 159, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger .lines {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 3px;
+  background: #3f3f3f;
+  border-radius: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  background: transparent;
+}
+
+/* line 165, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger .lines::before,
+.header__hamburger .lines::after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 3px;
+  background: #3f3f3f;
+  border-radius: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  content: "";
+  -webkit-transform-origin: 35px/14 center;
+       -o-transform-origin: 35px/14 center;
+          transform-origin: 35px/14 center;
+  left: 0;
+}
+
+/* line 173, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger .lines::before {
+  top: 5px;
+}
+
+/* line 176, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger .lines::after {
+  top: -5px;
+}
+
+/* line 181, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger .lines-button:hover {
+  opacity: 1;
+}
+
+/* line 186, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger.active .lines {
+  background: transparent;
+  border: 0;
+}
+
+/* line 190, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger.active .lines::before,
+.header__hamburger.active .lines::after {
+  -webkit-transform-origin: 50% 50%;
+       -o-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  top: 0;
+  width: 30px;
+}
+
+/* line 197, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger.active .lines::before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+          transform: rotate3d(0, 0, 1, 45deg);
+}
+
+/* line 201, resources/assets/styles/layouts/_header.scss */
+
+.header__hamburger.active .lines::after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 209, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+       -o-transform: translateX(-100%);
+          transform: translateX(-100%);
+  background: #000;
+  z-index: 5;
+  width: 100vw;
+  min-height: calc(82vh - 74px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  max-width: 500px;
+  padding: 10px 20px 20px 20px;
+}
+
+@media (min-width: 900px) {
+  /* line 209, resources/assets/styles/layouts/_header.scss */
+
+  .off-canvas {
+    min-height: calc(100vh - 105px);
+  }
+}
+
+/* line 230, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 233, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media (min-width: 900px) {
+  /* line 233, resources/assets/styles/layouts/_header.scss */
+
+  .off-canvas.active {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-100%);
+         -o-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+/* line 244, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas__inner {
+  border: 1px solid #7f7f7f;
+  padding: 40px 20px;
+  margin: 70px 0 0 0;
+  height: 100%;
+  min-height: calc(82vh - 74px);
+}
+
+@media (min-width: 900px) {
+  /* line 244, resources/assets/styles/layouts/_header.scss */
+
+  .off-canvas__inner {
+    min-height: calc(100vh - 105px);
+  }
+}
+
+/* line 256, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 0 0 0;
+}
+
+/* line 262, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas__logo svg {
+  width: auto;
+  height: 32px;
+}
+
+/* line 266, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas__logo svg path {
+  fill: #fff;
+}
+
+@media (min-width: 900px) {
+  /* line 262, resources/assets/styles/layouts/_header.scss */
+
+  .off-canvas__logo svg {
+    height: 23px;
+  }
+}
+
+/* line 276, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 281, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas ul li {
+  margin: 0 0 60px 0;
+  display: block;
+  width: 100%;
+}
+
+/* line 287, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas ul li.current-menu-item a {
+  color: #7f7f7f;
+}
+
+/* line 292, resources/assets/styles/layouts/_header.scss */
+
+.off-canvas ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  font-family: "Calibre", arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* line 308, resources/assets/styles/layouts/_header.scss */
 
 .plyr--video.plyr--hide-controls .plyr__controls {
   opacity: 1;
@@ -19389,7 +20076,7 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 59, resources/assets/styles/layouts/_header.scss */
+  /* line 308, resources/assets/styles/layouts/_header.scss */
 
   .plyr--video.plyr--hide-controls .plyr__controls {
     opacity: 0;
@@ -19401,7 +20088,7 @@ img {
 }
 
 @media screen and (max-width: 500px) {
-  /* line 73, resources/assets/styles/layouts/_header.scss */
+  /* line 322, resources/assets/styles/layouts/_header.scss */
 
   .plyr .plyr__controls button[data-plyr=pip],
   .plyr .plyr__controls button[data-plyr=mute],
@@ -19409,7 +20096,7 @@ img {
     display: block;
   }
 
-  /* line 78, resources/assets/styles/layouts/_header.scss */
+  /* line 327, resources/assets/styles/layouts/_header.scss */
 
   .plyr--video.plyr--hide-controls .plyr__controls {
     opacity: 1;
@@ -19474,11 +20161,20 @@ img {
 .content-info span {
   font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 14px;
   display: block;
   text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  /* line 24, resources/assets/styles/layouts/_footer.scss */
+
+  .content-info span {
+    font-size: 17px;
+    line-height: 21px;
+  }
 }
 
 /* line 30, resources/assets/styles/layouts/_footer.scss */
@@ -19491,9 +20187,9 @@ img {
   text-decoration: none;
   font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 14px;
 }
 
 /* line 43, resources/assets/styles/common/_mixins.scss */
@@ -19538,6 +20234,15 @@ img {
   }
 }
 
+@media (min-width: 900px) {
+  /* line 30, resources/assets/styles/layouts/_footer.scss */
+
+  .content-info a {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
 /* line 1, resources/assets/styles/layouts/_last-block.scss */
 
 .last-block {
@@ -19548,11 +20253,11 @@ img {
 /* line 5, resources/assets/styles/layouts/_last-block.scss */
 
 .last-block a {
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #000;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19566,6 +20271,7 @@ img {
 
   .last-block a {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
@@ -19589,8 +20295,16 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100vh - 125px);
+  min-height: calc(82vh - 74px);
   height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 16, resources/assets/styles/layouts/_last-block.scss */
+
+  .last-block__inner {
+    min-height: calc(100vh - 125px);
+  }
 }
 
 /* line 25, resources/assets/styles/layouts/_last-block.scss */
@@ -19605,11 +20319,11 @@ img {
 .last-block__bottom {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #000;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19622,6 +20336,7 @@ img {
 
   .last-block__bottom {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
@@ -19633,11 +20348,11 @@ img {
   color: #000;
   line-height: 15px;
   text-decoration: none;
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #000;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19693,6 +20408,7 @@ img {
 
   .last-block__bottom a {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
@@ -19717,11 +20433,11 @@ img {
 /* line 54, resources/assets/styles/layouts/_last-block.scss */
 
 .last-block__bottom .newsletter h4 {
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #000;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19734,6 +20450,7 @@ img {
 
   .last-block__bottom .newsletter h4 {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
@@ -19861,8 +20578,16 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100vh - 125px);
+  min-height: calc(82vh - 74px);
   height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 16, resources/assets/styles/layouts/_collaboration.scss */
+
+  .collaborations__inner {
+    min-height: calc(100vh - 125px);
+  }
 }
 
 /* line 26, resources/assets/styles/layouts/_collaboration.scss */
@@ -19898,11 +20623,11 @@ img {
 /* line 48, resources/assets/styles/layouts/_collaboration.scss */
 
 .collaborations__bottom h2 {
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19914,17 +20639,18 @@ img {
 
   .collaborations__bottom h2 {
     font-size: 17px;
+    line-height: 21px;
   }
 }
 
 /* line 53, resources/assets/styles/layouts/_collaboration.scss */
 
 .collaborations h1 {
-  font-family: "reader", arial, sans-serif;
+  font-family: "Calibre", arial, sans-serif;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  line-height: 21px;
+  line-height: 11px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -19936,6 +20662,120 @@ img {
 
   .collaborations h1 {
     font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+/* line 2, resources/assets/styles/layouts/_posts.scss */
+
+.news__item {
+  border: 1px solid #7f7f7f;
+  background-size: cover;
+  background-position: 50% 0;
+}
+
+/* line 16, resources/assets/styles/layouts/_posts.scss */
+
+.news__inner {
+  padding: 33px 29px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(82vh - 74px);
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 16, resources/assets/styles/layouts/_posts.scss */
+
+  .news__inner {
+    min-height: calc(100vh - 125px);
+  }
+}
+
+/* line 26, resources/assets/styles/layouts/_posts.scss */
+
+.news__link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #000;
+  opacity: 0.5;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 37, resources/assets/styles/layouts/_posts.scss */
+
+.news__link:hover {
+  opacity: 0;
+}
+
+/* line 42, resources/assets/styles/layouts/_posts.scss */
+
+.news__bottom {
+  position: absolute;
+  bottom: 33px;
+  z-index: 10;
+}
+
+/* line 48, resources/assets/styles/layouts/_posts.scss */
+
+.news__bottom h1,
+.news__bottom span {
+  font-family: "Calibre", arial, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 11px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  /* line 48, resources/assets/styles/layouts/_posts.scss */
+
+  .news__bottom h1,
+  .news__bottom span {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+/* line 54, resources/assets/styles/layouts/_posts.scss */
+
+.news h1 {
+  font-family: "Calibre", arial, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 11px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  /* line 54, resources/assets/styles/layouts/_posts.scss */
+
+  .news h1 {
+    font-size: 17px;
+    line-height: 21px;
   }
 }
 

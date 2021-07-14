@@ -1,0 +1,48 @@
+.collaborators {
+  border: 1px solid $brand--secondary;
+  &__inner {
+    padding: 33px 29px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include section-height;
+  }
+
+  &__item {
+    padding: 15px 0 20px 0;
+
+    .btn {
+      margin: 15px 0 0 0;
+      width: 190px;
+    }
+  }
+
+  h2 {
+    @include title($brand--primary);
+
+    padding: 0 0 20px 0;
+  }
+
+  h3 {
+    @include title($brand--primary);
+
+    font-size: 12px;
+    letter-spacing: 0.27px;
+    line-height: 14px;
+    text-transform: none;
+    font-weight: initial;
+  }
+
+  a {
+    @include paragraph;
+
+    line-height: 0;
+    padding: 15px 0 13px 0;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+      text-decoration: none;
+    }
+  }
+}

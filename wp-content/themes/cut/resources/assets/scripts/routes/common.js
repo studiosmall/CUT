@@ -41,15 +41,32 @@ export default {
     let totalWidth = 0;
 
         $('section.section').each(function() {
-          totalWidth += parseInt($(this).outerWidth() + 40, 10);
+          totalWidth += parseInt($(this).outerWidth() + 20, 10);
           console.log(totalWidth);
         });
 
-        $('.horizontal-container').css('min-width', totalWidth + 6);
+        $('.horizontal-container').css('min-width', totalWidth + 26);
 
         // let singleWidth = $('.last-block').width();
         // console.log(singleWidth + ' new')
     });
+
+    // Hamburger
+    $('.header__hamburger').on('click', function(e){
+      e.preventDefault();
+      $(this).toggleClass('active');
+      $('.off-canvas, body').toggleClass('active');
+    });
+
+    if($('body').hasClass('home')) {
+
+      setTimeout(function() {
+        $('.header__brand svg').removeClass('active');
+        $('.video').removeClass('logo-active');
+        
+      }, 4000);
+
+    }
 
   },
 };
