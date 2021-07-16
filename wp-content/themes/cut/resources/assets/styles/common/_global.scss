@@ -116,11 +116,16 @@ img {
 
   &.video {
     width: calc(100vw - 40px);
-    min-height: calc(100vh - 125px);
+    min-height: calc(80vh - 125px);
+    //min-height: calc(100vh - 300px);
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include breakpoint(medium) {
+      min-height: calc(100vh - 160px);
+    }
   }
 
   &__inner {
@@ -144,6 +149,18 @@ img {
       padding: 0 50px;
     }
   }
+
+  &__message {
+    position: absolute;
+    display: block;
+    bottom: 10%;
+
+    @include title($brand--primary);
+
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
 }
 
 .scoll-content {
@@ -153,8 +170,8 @@ img {
 
 .ico-arrow {
   background: url("../images/ico-arrow.svg");
-  background-size: 10px;
-  width: 10px;
+  background-size: 12px;
+  width: 12px;
   height: 20px;
   display: inline-block;
   vertical-align: middle;

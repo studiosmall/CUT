@@ -1,15 +1,22 @@
 .divider-title {
   border: 1px solid $brand--primary;
   background-color: $brand--primary;
-  width: 80px;
+  width: 50px;
+
+  @include breakpoint(medium) {
+    width: 80px;
+  }
 
   &__inner {
-    padding: 33px 29px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     @include section-height;
+    padding: 33px 17px;
+
+    @include breakpoint(medium) {
+      padding: 33px 29px;
+    }
   }
 
   &__container {

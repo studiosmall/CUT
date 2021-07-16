@@ -55,6 +55,7 @@
             allowtransparency
             allow="autoplay"
           ></iframe>
+
       </div>
 
       <script> 
@@ -66,6 +67,8 @@
         // Expose player so it can be used from the console
         window.player = player;
       </script>
+
+      <span class="video__message">SWIPE RIGHT!</span>
 
     </section>
 

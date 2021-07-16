@@ -79,12 +79,19 @@
 
       &__agree {
         display: flex;
-        align-items: baseline;
+        align-items: flex-start;
         text-transform: initial;
         padding: 10px 0 0 0;
 
+        @include breakpoint(medium) {
+          align-items: baseline;
+        }
+
         label {
-          padding: 0 0 0 10px;
+          padding: 5px 0 0 10px;
+          @include breakpoint(medium) {
+            padding: 0 0 0 10px;
+          }
         }
       }
 
