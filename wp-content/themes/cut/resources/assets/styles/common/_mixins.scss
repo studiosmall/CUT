@@ -67,7 +67,7 @@
 @mixin nav {
   font-family: $font--body;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   color: $brand--secondary;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -142,7 +142,7 @@
   line-height: 14px;
 
   @include breakpoint(medium) {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 19px;
   }
 }
@@ -159,7 +159,7 @@
   font-weight: 500;
 
   @include breakpoint(medium) {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 19px;
     // line-height: 24px;
   }

@@ -24,6 +24,11 @@
 
   &__top {
     align-self: flex-start;
+
+    a {
+      font-weight: bold;
+      font-family: $font--body;
+    }
   }
 
   &__bottom {
@@ -49,7 +54,7 @@
     }
 
     .newsletter {
-      padding: 15px 0 0 0;
+      padding: 0 0 15px 0;
 
       h4 {
         @include title($bg);
@@ -121,10 +126,10 @@
   &__by {
     padding: 20px 0 0 0;
     display: block;
-    font-size: 12px;
+    font-size: 13px;
 
     a {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 }

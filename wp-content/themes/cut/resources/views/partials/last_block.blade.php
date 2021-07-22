@@ -38,15 +38,6 @@
 			</div>
 
 			<div class="last-block__bottom">
-				@if($options['email'])
-				<span>
-					Contact — <a href="mailto:{!! $options['email'] !!}">{!! $options['email'] !!}</a>
-				</span>
-				@endif
-				@if($options['phone'])
-					<a href="tel:{!! $options['phone'] !!}">{!! $options['phone'] !!}</a>
-				@endif
-
 				<div class="newsletter">
 					<h4>SIGN UP TO THE NEWSLETTER</h4>
 
@@ -67,7 +58,16 @@
 
 				</div>
 
-				<span class="last-block__by">site by — <a href="https://studiosmall.com" target="_blank" rel="nofollow noopener noreferrer">StudioSmall</a></span>
+				@if($options['email'])
+				<span>
+					Contact — <a href="mailto:{!! $options['email'] !!}">{!! $options['email'] !!}</a>
+				</span>
+				@endif
+				@if($options['phone'])
+					<a href="tel:{!! $options['phone'] !!}">{!! $options['phone'] !!}</a>
+				@endif
+
+				<span class="last-block__by">site by — <a href="https://studiosmall.com" target="_blank" rel="nofollow noopener noreferrer">STUDIOSMALL</a></span>
 
 			</div>
 
